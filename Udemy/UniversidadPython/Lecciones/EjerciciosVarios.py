@@ -147,3 +147,24 @@ import os
 # pagoTotal = calculadoraImpuestos(pago, impuestos)
 # print(f'Pago con Impuestos: {pagoTotal}')
 
+#Ejercicio Convertidor de Temperatura
+    #Paso de Fahrenheit a Celsius y viceversa
+    #1 celsius = 33.8 fahrenheit
+    #0 fahrenheit = -17,2222 celsius
+
+def calculoFahrenheit(grados):
+    resultadoF = grados * 33.8
+    return resultadoF
+def calculoCelsius(grados):
+    resultadoC = grados * 33.8
+    return resultadoC
+
+eleccionCalculo = int(input("Que vas a introducir? (1-Celsius, 2-Fahrenheit): "))
+if eleccionCalculo == 1:
+    gradosCelsius = float(input("Introduce los grados Celsius: "))
+    print(f'Los grados introducidos en celsius son: {calculoFahrenheit(gradosCelsius)} grados Fahrenheit')
+elif eleccionCalculo == 2:
+    gradosFahrenheit = float(input("Introduce los grados Fahrenheit: "))
+    print(f'Los grados introducidos en Fahrenheit son: {calculoCelsius(gradosFahrenheit)} grados Celsius')
+else:
+    print("Eleccion erronea")
