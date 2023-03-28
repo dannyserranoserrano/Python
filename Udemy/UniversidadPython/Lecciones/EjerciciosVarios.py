@@ -69,20 +69,30 @@ import os
 #         print(f'Tu nota {nota} es una F')
 #     else:
 #         print(f'Tu nota {nota} es Valor Incorrecto')
+#
+# #Ejercicios Listas.
+#     #Ejercicio 1.
+#         #Iterar un rango de numeros de 0 a 10 e imprimir números divisibles entre 3
+# for numero in range(11):
+#     if numero % 3 == 0:
+#         print(numero)
+#
+#     #Ejercicio 2.
+#         #Crear un rango de números de 2 a 6, e imprimirlos.
+# for numero in range(2, 7):
+#     print(numero)
+#
+#     #Ejercicio 3.
+#         #Crear un rango de 3 a 10, pero con incremento de 2 en 2, en lugar de 1 en 1.
+# for numero in range(3, 11, 2):
+#     print(numero)
 
-#Ejercicios Listas.
-    #Ejercicio 1.
-        #Iterar un rango de numeros de 0 a 10 e imprimir números divisibles entre 3
-for numero in range(11):
-    if numero % 3 == 0:
-        print(numero)
-
-    #Ejercicio 2.
-        #Crear un rango de números de 2 a 6, e imprimirlos.
-for numero in range(2, 7):
-    print(numero)
-
-    #Ejercicio 3.
-        #Crear un rango de 3 a 10, pero con incremento de 2 en 2, en lugar de 1 en 1.
-for numero in range(3, 11, 2):
-    print(numero)
+#Ejercicio Tuplas
+#Dada la siguiente tupla, crear una lista que solo incluya los numeros menores a 5
+tupla = (13, 1, 8, 3, 2, 5, 8)
+lista = []
+print(f'Tupla creada: {tupla}')
+for number in tupla:
+    if number < 5:
+        lista.append(number)
+print(f'Lista resultante: {lista}')
