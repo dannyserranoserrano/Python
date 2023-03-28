@@ -87,12 +87,63 @@ import os
 # for numero in range(3, 11, 2):
 #     print(numero)
 
-#Ejercicio Tuplas
-#Dada la siguiente tupla, crear una lista que solo incluya los numeros menores a 5
-tupla = (13, 1, 8, 3, 2, 5, 8)
-lista = []
-print(f'Tupla creada: {tupla}')
-for number in tupla:
-    if number < 5:
-        lista.append(number)
-print(f'Lista resultante: {lista}')
+# #Ejercicio Tuplas
+# #Dada la siguiente tupla, crear una lista que solo incluya los numeros menores a 5
+# tupla = (13, 1, 8, 3, 2, 5, 8)
+# lista = []
+# print(f'Tupla creada: {tupla}')
+# for number in tupla:
+#     if number < 5:
+#         lista.append(number)
+# print(f'Lista resultante: {lista}')
+
+# #Ejercicos Funciones
+#     #Crear una funcion para sumar los valores recibidos de tipo numérico,
+#     #utilizando argumentos variables *args como parámetro de la función
+#     #y regresar como resultado la suma de todos los valores pasados como argumentos.
+#
+# def sumas(*numeros):
+#     resultado = 0
+#     for numero in numeros:
+#         resultado += numero
+#     #print(resultado)
+#     return resultado
+# #sumas(5, 6, 8, 25, 45)
+# print(sumas(5, 6, 8, 25, 450))
+
+# #Ejercicio multiplicar
+#     #Crear funcion multiplicar los valores recibidos, utilizando *args como parametros
+#
+# def multiplica(*args):
+#     resultado = 1
+#     for numero in args:
+#         resultado *= numero
+#     return resultado
+# print(multiplica(5, 6, 43, 3, 45))
+#
+
+# #Ejercicio Funcion recursiva
+#     #  Imprimir numeros de 5 a 1 de manera descendiente usando funciones recursivas.
+# def imprDescendiente(numero):
+#     if numero >= 1:
+#         print(numero)
+#         imprDescendiente(numero - 1)
+#     elif numero == 0:
+#         return
+#     elif numero < 0:
+#         print('Valor incorrecto...')
+# numero = 0
+# imprDescendiente(numero)
+
+# #Ejercicio Calculadora de Impuestos
+#     #Funcion calcular total de un pago incluyendo un impuesto aplicado.
+#     #Formula: pagoTotal = pagoSinImpuesto + pagoSinImpuesto * (impuesto/100)
+# def calculadoraImpuestos(pago, impuestos):
+#     pagoTotal = pago + pago * (impuestos/100.0)
+#     return pagoTotal
+#
+# pago = float(input("Proporciona el pago sin impuesto: "))
+# impuestos = float(input("Proporciona el valor del impuesto: "))
+# pagoTotal = calculadoraImpuestos(pago, impuestos)
+# print(f'Pago con Impuestos: {pagoTotal}')
+
