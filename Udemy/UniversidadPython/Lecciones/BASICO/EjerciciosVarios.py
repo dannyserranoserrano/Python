@@ -152,19 +152,19 @@ import os
     #1 celsius = 33.8 fahrenheit
     #0 fahrenheit = -17,2222 celsius
 
-def calculoFahrenheit(grados):
-    resultadoF = grados * 33.8
-    return resultadoF
-def calculoCelsius(grados):
-    resultadoC = grados * 33.8
-    return resultadoC
+def calculoFahrenheit(gradosCelsius):
+    return gradosCelsius * 9 / 5 + 32
+
+def calculoCelsius(gradosFahrenheit):
+    return (gradosFahrenheit - 32) * 5 / 9
+
 
 eleccionCalculo = int(input("Que vas a introducir? (1-Celsius, 2-Fahrenheit): "))
 if eleccionCalculo == 1:
     gradosCelsius = float(input("Introduce los grados Celsius: "))
-    print(f'Los grados introducidos en celsius son: {calculoFahrenheit(gradosCelsius)} grados Fahrenheit')
+    print(f'{gradosCelsius} grados celsius son: {calculoFahrenheit(gradosCelsius):.2f} grados Fahrenheit')
 elif eleccionCalculo == 2:
     gradosFahrenheit = float(input("Introduce los grados Fahrenheit: "))
-    print(f'Los grados introducidos en Fahrenheit son: {calculoCelsius(gradosFahrenheit)} grados Celsius')
+    print(f'{gradosFahrenheit} grados Fahrenheit son: {calculoCelsius(gradosFahrenheit):.2f} grados Celsius')#Para reducir el resultado float a 2 digitos se pone :2f
 else:
     print("Eleccion erronea")
