@@ -1,23 +1,35 @@
 class Persona:
     def __init__(self, nombre, apellido, edad):
         self._nombre = nombre
-        self.apellido = apellido
-        self.edad = edad
+        self._apellido = apellido
+        self._edad = edad
 
     # Metodo GET
     @property  # Este decorador hace que podamos acceder al atributo mediante el metodo sin poner ()
     def nombre(self):
         print('Llamando método GET Nombre')
         return self._nombre
+    @property
+    def apellido(self):
+        return self._apellido
+    @property
+    def edad(self):
+        return self._edad
 
     # Metodo SET
     @nombre.setter
     def nombre(self, nombre):
         print('Llamando método SET Nombre')
         self._nombre = nombre
+    @apellido.setter
+    def apellido(self, apellido):
+        self._apellido = apellido
+    @edad.setter
+    def edad(self, edad):
+        self._edad = edad
 
     def mostrarDetalle(self):
-        print(f'Persona: {self._nombre} {self.apellido} {self.edad}')
+        print(f'Persona: {self._nombre} {self._apellido} {self._edad}')
 
 
 persona1 = Persona('Danny', 'Serrano', 40)

@@ -12,22 +12,26 @@ class Persona:
     def mostrarDetalle(self):
         print(f'Persona: {self.nombre} {self.apellido} {self.edad} {self.args} {self.kwards}')
 
-
+    def __del__(self):  # Metodo destructor de objetos
+        print(f'Persona: {self.nombre} {self.apellido}')
+if __name__ == "__main__":  # Sirve para que solo se ejecute ese codigo si lo ejecutamos desde el archivo Persona.
 # PRINTS
-persona1 = Persona('Danny', 'Serrano', 40, '4433554433', 2, 3, 4, m='manzana', p='pera',
-                   l='limon')  # Creacion y asignacion de una persona
-persona1.mostrarDetalle()  # Llamada al metodo
-# print(f'Objeto Persona 1: {persona1.nombre} {persona1.apellido} {persona1.edad}')
-Persona.mostrarDetalle(persona1)
-persona1.telefono = "659547749"  # Agregar nuevos atributos(Referenciado solo a persona 1)
+    persona1 = Persona('Danny', 'Serrano', 40, '4433554433', 2, 3, 4, m='manzana', p='pera',
+                       l='limon')  # Creacion y asignacion de una persona
+    persona1.mostrarDetalle()  # Llamada al metodo
+    # print(f'Objeto Persona 1: {persona1.nombre} {persona1.apellido} {persona1.edad}')
+    # Persona.mostrarDetalle(persona1)
+    # persona1.telefono = "659547749"  # Agregar nuevos atributos(Referenciado solo a persona 1)
 
-persona2 = Persona('Carlos', 'Gomez', 30)  # Creacion y asignacion de una persona
-persona2.mostrarDetalle()  # Llamada al metodo
-# print(f'Objeto Persona 2: {persona2.nombre} {persona2.apellido} {persona2.edad}')
-Persona.mostrarDetalle(persona2)
+    # persona2 = Persona('Carlos', 'Gomez', 30)  # Creacion y asignacion de una persona
+    # persona2.mostrarDetalle()  # Llamada al metodo
+    # # print(f'Objeto Persona 2: {persona2.nombre} {persona2.apellido} {persona2.edad}')
+    # Persona.mostrarDetalle(persona2)
 
-# Modificar datos
-# persona1.nombre = 'Juan Carlos'
-# persona1.apellido = 'Perez' #Modificar datos
-# persona1.edad = 25 #Modificar datos
-# print(f'Objeto Persona 1: {persona1.nombre} {persona1.apellido} {persona1.edad}')
+    print(__name__)  # Muestra el modulo que se esta ejecutando
+
+    # Modificar datos
+    # persona1.nombre = 'Juan Carlos'
+    # persona1.apellido = 'Perez' #Modificar datos
+    # persona1.edad = 25 #Modificar datos
+    # print(f'Objeto Persona 1: {persona1.nombre} {persona1.apellido} {persona1.edad}')
