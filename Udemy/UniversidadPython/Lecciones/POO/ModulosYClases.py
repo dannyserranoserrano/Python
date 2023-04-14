@@ -7,7 +7,6 @@ from Persona import Persona
 # print(__name__)  # Muestra el modulo que se esta ejecutando
 
 # Destructor de Objetos en Python (Creado en Persona)
-
 print('Creacion de objetos' .center(50, '-'))
 persona1 = Persona('Carla', 'Gomez', 30)
 persona1.mostrarDetalle()

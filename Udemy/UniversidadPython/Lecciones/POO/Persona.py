@@ -12,8 +12,10 @@ class Persona:
     def mostrarDetalle(self):
         print(f'Persona: {self.nombre} {self.apellido} {self.edad} {self.args} {self.kwards}')
 
-    def __del__(self):  # Metodo destructor de objetos
+    # Metodo destructor de objetos
+    def __del__(self):
         print(f'Persona: {self.nombre} {self.apellido}')
+
 if __name__ == "__main__":  # Sirve para que solo se ejecute ese codigo si lo ejecutamos desde el archivo Persona.
 # PRINTS
     persona1 = Persona('Danny', 'Serrano', 40, '4433554433', 2, 3, 4, m='manzana', p='pera',
