@@ -1,4 +1,4 @@
-from HerenciaPersona import *
+from Python.Udemy.UniversidadPython.Lecciones.POO.HerenciaSimple.HerenciaPersona import *
 
 persona1 = Persona('Juan', 28)
 print(persona1)
