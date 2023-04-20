@@ -58,7 +58,7 @@ class Cuadrado(FiguraGeometrica, Color):
         return self.alto * self.ancho
 
     def __str__(self):
-        return f'CUADRADO: {self.color}, {self.ancho}, {self.alto}, {FiguraGeometrica.__str__(self)}, {Color.__str__(self)}'
+        return f'CUADRADO: {self.color}, {self.alto}, {self.ancho}, {FiguraGeometrica.__str__(self)}, {Color.__str__(self)}'
 
 
 class Rectangulo(FiguraGeometrica, Color):
@@ -70,5 +70,5 @@ class Rectangulo(FiguraGeometrica, Color):
         return self.alto * self.ancho
 
     def __str__(self):
-        return f'RECTANGULO: {self.color}, {self.ancho}, {self.alto}, {FiguraGeometrica.__str__(self)}, {Color.__str__(self)}'
+        return f'RECTANGULO: {self.color}, {self.alto}, {self.ancho}, {FiguraGeometrica.__str__(self)}, {Color.__str__(self)}'
 
