@@ -1,14 +1,18 @@
-class FiguraGeometrica:
+#ABC = abstract Base Class
+from abc import ABC, abstractmethod
+
+class FiguraGeometrica(ABC):
     def __init__(self, alto, ancho):
-        if 0 < alto < 10:
+        if self._validarValor(alto):
             self._alto = alto
         else:
             self._alto = 0
-
-        if 0 < ancho < 10:
+            print(f'Valor erroneo alto: {alto}')
+        if self._validarValor(ancho):
             self._ancho = ancho
         else:
             self._ancho = 0
+            print (f'Valor erroneo alto: {ancho}')
 
 
     # GET (Coger)
@@ -23,16 +27,27 @@ class FiguraGeometrica:
     # SET (Establecer)
     @alto.setter
     def alto(self, alto):
-        self._alto = alto
+        if self._validarValor(alto):
+            self._alto = alto
+        else:
+            print(f'Valor erroneo ancho: {alto}')
 
     @ancho.setter
     def ancho(self, ancho):
-        self._ancho = ancho
+        if self._validarValor(ancho):
+            self._ancho = ancho
+        else:
+            print(f'Valor erroneo ancho: {ancho}')
+
+    @abstractmethod
+    def area(self):
+        pass
 
     def __str__(self):
         return f'El Alto es: {self.alto} y el Ancho es: {self.ancho}'
 
-
+    def _validarValor(self, valor):
+        return True if 0 < valor < 10 else False
 class Color:
     def __init__(self, color):
         self._color = color
