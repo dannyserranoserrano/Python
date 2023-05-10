@@ -1,4 +1,4 @@
-from POO.Leccion07.Producto import Producto
+from POO.DiseñoDeClases.Producto import Producto
 
 
 class Orden:
